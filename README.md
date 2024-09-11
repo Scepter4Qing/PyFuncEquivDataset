@@ -1,6 +1,6 @@
 # Dataset
 
-This is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 132 FE method pairs that have been validated.
+This is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 132 FE method pairs in python that have been validated.
 
 # Quick Start
 
