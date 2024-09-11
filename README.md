@@ -1,4 +1,4 @@
-# dataset
+# Dataset
 
 This is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 132 FE method pairs that have been validated.
 
@@ -34,3 +34,14 @@ The schema of table `methods` is as follows.
 
 Of the above items `revision` are not used in this dataset.
 So, all users of this dataset can ignore values in that items.
+
+
+### Table `pairs`
+
+Table `pairs` includes a list of method pairs that are candidates of FE method pairs.
+
+
+- `leftMethodID` and `rightMethodID` represent the identifiers of the two methods that form the pair. `leftMethodID/rightMethodID` are common to `id` in table `methods`.
+- `id` is the unique identifier of this pair.
+
+
