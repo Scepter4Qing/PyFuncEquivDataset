@@ -6,6 +6,15 @@ PyFuncEquivDataset is a dataset of functionally equivalent (in short, FE) method
 
 The size of this dataset is very large, approximately 3.14 GB.
 
+Then, please make sure that SQLite is installed in your environment.
+
+```shell-session
+$sqlite3 PyFuncEquivDataset.db
+SQLite version 3.43.2 2023-10-10 13:08:14
+Enter ".help" for usage hints.
+sqlite>
+```
+
 ### Tables in PyFuncEquivDataset.db
 
 There are three tables `methods`, `pairs`, and `verifiedpairs` in this dataset.
