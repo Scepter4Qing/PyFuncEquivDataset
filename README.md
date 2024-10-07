@@ -1,6 +1,6 @@
-# Dataset
+# PyFuncEquivDataset
 
-This is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 132 FE method pairs in python that have been validated.
+PyFuncEquivDataset is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 130 FE method pairs in python that have been validated.
 
 # Quick Start
 
