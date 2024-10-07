@@ -42,14 +42,14 @@ CREATE TABLE verifiedpairs (
 - `reviewer` represent the results of manual checking by the reviewer, where `1` indicates functional equivalence and `0` indicates functional non-equivalence.
 
 
-You can get the number of FE method pairs that have been validated by the three reviewers with the following command.
+You can get the number of FE method pairs that have been validated by the reviewer with the following command.
 
 ```shell-session
 sqlite> select count(*) from verifiedpairs where reviewer = 1;
 130
 ```
 
-The following command enables you to see the source code of FE method pairs that have been validated by the three reviewers.
+The following command enables you to see the source code of FE method pairs that have been validated by the reviewer.
 
 ```shell-session
 sqlite> select (select rtext from methods where id = (select leftMethodID from pairs P where P.id = V.pairid)), (select rtext from methods where id = (select rightMethodID from pairs P where p.id = V.pairid)) from verifiedpairs V where reviewer = 1;
