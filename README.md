@@ -27,6 +27,35 @@ methods        pairs          verifiedpairs
 Of those three tables, table `verifiedpairs` includes information on FE method pairs.
 
 
+### Table `verifiedpairs`
+
+The schema of table `verifiedpairs` is as follows.
+
+```shell-session
+sqlite> .schema verifiedpairs
+CREATE TABLE verifiedpairs (
+    pairid    INTEGER
+, reviewer INTEGER);
+```
+
+- `pairid` means the unique identifier for the method pair.
+- `reviewer` represent the results of manual checking by the reviewer, where `1` indicates functional equivalence and `0` indicates functional non-equivalence.
+
+
+You can get the number of FE method pairs that have been validated by the three reviewers with the following command.
+
+```shell-session
+sqlite> select count(*) from verifiedpairs where reviewer = 1;
+130
+```
+
+The following command enables you to see the source code of FE method pairs that have been validated by the three reviewers.
+
+```shell-session
+sqlite> select (select rtext from methods where id = (select leftMethodID from pairs P where P.id = V.pairid)), (select rtext from methods where id = (select rightMethodID from pairs P where p.id = V.pairid)) from verifiedpairs V where reviewer = 1;
+```
+
+
 ## Detailed Information
 
 ### Table `methods`
@@ -106,20 +135,6 @@ Herein, each candidate of FE method pairs satisfies the following conditions.
 
 
 
-
-### Table `verifiedpairs`
-
-The schema of table `verifiedpairs` is as follows.
-
-```shell-session
-sqlite> .schema verifiedpairs
-CREATE TABLE verifiedpairs (
-    pairid    INTEGER
-, reviewer INTEGER);
-```
-
-- `pairid` means the unique identifier for the method pair.
-- `reviewer` represent the results of manual checking by the reviewer, where `1` indicates functional equivalence and `0` indicates functional non-equivalence.
 
 
 
