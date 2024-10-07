@@ -2,11 +2,18 @@
 
 PyFuncEquivDataset is a dataset of functionally equivalent (in short, FE) method pairs. This dataset includes 130 FE method pairs in python that have been validated.
 
-# Quick Start
+## Quick start
 
-### Tables in ijadataset.db
+The size of this dataset is very large, approximately 3.14 GB.
+
+### Tables in PyFuncEquivDataset.db
 
 There are three tables `methods`, `pairs`, and `verifiedpairs` in this dataset.
+
+```shell-session
+sqlite> .table
+methods        pairs          verifiedpairs
+```
 
 Of those three tables, table `verifiedpairs` includes information on FE method pairs.
 
