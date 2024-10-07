@@ -70,7 +70,16 @@ So, all users of this dataset can ignore values in that items.
 
 ### Table `pairs`
 
-Table `pairs` includes a list of method pairs that are candidates of FE method pairs.
+Table `pairs` includes a list of candidates FE method pairs.
+The schema of table `pairs` is as follows.
+```shell-session
+sqlite> .schema pairs
+CREATE TABLE pairs (
+    leftMethodID  INT,
+    rightMethodID INT,
+    id            INTEGER PRIMARY KEY AUTOINCREMENT
+);
+```
 
 - `leftMethodID` and `rightMethodID` represent the identifiers of the two methods that form the pair. `leftMethodID/rightMethodID` are common to `id` in table `methods`.
 - `id` is the unique identifier of this pair.
