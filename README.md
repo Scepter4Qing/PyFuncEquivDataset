@@ -97,12 +97,13 @@ CREATE TABLE methods (
 - `repo` represent which open-source project this method comes from.
 - `revision` is not used in this dataset.
 - `compilable` The method used to perform the mutual execution step is set to `1`, otherwise it is set to `0`.
+- `tests` is not used in this dataset.
 - `Target_ESTest` is the set of test cases that Pynguin generated for the method.
 - `Target_ESTest_scaffolding` is the set of test cases that are processed and used for mutual execution.
 - `groupID` is the grouping result of 'groupID' after type inference.
 - `id` represents the unique identifier of the method.
 
-Of the above items `revision` are not used in this dataset.
+Of the above items `revision` and `tests` are not used in this dataset.
 So, all users of this dataset can ignore values in that items.
 
 
