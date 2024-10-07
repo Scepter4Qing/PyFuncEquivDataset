@@ -59,10 +59,9 @@ CREATE TABLE verifiedpairs (
 ```
 
 - `pairid` means the unique identifier for the method pair.
-- `reviewera`, `reviewerb`, and `reviewerc` mean that they represent the judgement results that were individually confirmed by each reviewer. `1` means functionally equivalent and `0` means not functionally equivalent.
-- `consensus` means the final decision result. If all three reviewers gave `1` or `0`, then `consensus` is equal to that value. If there was a difference between the three reviewers' judgements, they had a discussion about the method pair, and `consensus` represent the result of that discussion.
+- `reviewer` represent the results of manual checking by the reviewer, where `1` indicates functional equivalence and `0` indicates functional non-equivalence.
 
-You can get the number of FE method pairs that have been validated by the three reviewers with the following command.
+
 
 - `leftMethodID` and `rightMethodID` represent the identifiers of the two methods that form the pair. `leftMethodID/rightMethodID` are common to `id` in table `methods`.
 - `id` is the unique identifier of this pair.
