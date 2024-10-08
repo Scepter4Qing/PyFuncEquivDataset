@@ -63,6 +63,7 @@ The schema of table `methods` is as follows.
 ```shell-session
 sqlite> .schema methods
 CREATE TABLE methods (signature STRING, name STRING, rtext BLOB, ntext BLOB, size INT, branches INT, hash BLOB, path STRING, start INT, end INT, repo STRING, revision STRING, compilable INT, tests INT, generated_tests BLOB, used_tests BLOB, groupID INT, id INTEGER PRIMARY KEY AUTOINCREMENT);
+CREATE UNIQUE INDEX sameness ON methods (path, start, end, repo, revision);
 ```
 - `signature` represents the declaration of the method.
 - `name` represents the name of the method.
