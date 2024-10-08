@@ -80,8 +80,8 @@ CREATE TABLE methods (
     revision                  STRING,
     compilable                INT,
     tests                     INT,
-    Target_ESTest             BLOB,
-    Target_ESTest_scaffolding BLOB,
+    generated_tests           BLOB,
+    used_tests                BLOB,
     groupID                   INT,
     id                        INTEGER PRIMARY KEY AUTOINCREMENT
 );
