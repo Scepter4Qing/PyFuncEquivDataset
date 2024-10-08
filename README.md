@@ -33,10 +33,7 @@ The schema of table `verifiedpairs` is as follows.
 
 ```shell-session
 sqlite> .schema verifiedpairs
-CREATE TABLE verifiedpairs (
-    pairid    INTEGER,
-    reviewer  INTEGER
-);
+CREATE TABLE verifiedpairs (pairid INTEGER, reviewer INTEGER);
 ```
 
 - `pairid` means the unique identifier for the method pair.
