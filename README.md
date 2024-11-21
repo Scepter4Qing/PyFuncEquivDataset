@@ -4,7 +4,11 @@ PyFuncEquivDataset is a dataset of functionally equivalent (in short, FE) method
 
 ## Quick start
 
-The size of this dataset is very large, approximately 3.14 GB.
+You can download the dataset from the following URL: 
+
+[https://www.dropbox.com/s/7rcg4mso1k755nh/ijadataset.db?dl=0](https://www.dropbox.com/scl/fi/6zp644npamt63j0x0zsh4/PyFuncEquivDataset.db?rlkey=61h8c5f6drvtd5k2e667oy116&e=1&st=r38xy9he&dl=0)
+
+The size of this dataset is very large, approximately 2.04 GB. For this reason, this file is not on GitHub, but on Dropbox.
 
 Then, please make sure that SQLite is installed in your environment.
 
